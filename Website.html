@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head style="background-color:black;">
+<style>
+* {box-sizing: border-box}
+
+@font-face {
+    font-family: 'font';
+    src: url('Font.otf');
+}
+
+body {font-family: "font", sans-serif; 
+   background-color: #414144; }
+
+
+/* Style the tab */
+.tab {
+  float: left;
+  border: 3px solid black;
+  background-color: #B05403;
+  width: 58%;
+  height: 915px;
+  position: absolute;
+  top: 600px;
+  font-family: "font"
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+  font-family: "font"
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #FFB06A;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #FFC897;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 3px solid black;
+  width: 42%;
+  border-left: none;
+  height: 915px;
+  color: white;
+  position: absolute;
+  top: 600px;
+  left: 732px;
+  font-family: "font"
+}
+</style>
+<title>Rock & Bowl</title>
+<script> 
+function openReview(evt, ReviewName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(ReviewName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+function setImage(url) {
+  document.getElementById("img").src = url
+  if (url == "3.png") {document.getElementById("apply").style.visibility="visible"}
+  else {document.getElementById("apply").style.visibility="hidden"}
+}
+</script>
+</head>
+
+<body style="max-height:-200px;background-color:#262626;margin:0px;overflow-x:hidden;">
+<svg style="z-index:3;" width="1920" height="130" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1920" height="100" x="0" y="0" rx="0" ry="0" fill="#191919" style="fill-opaReview:0.4;position:absolute;top:0px;z-index:3;"/>
+</svg>
+<h1 style="color:white;z-index:5;position:absolute;left:25px;top:5px;font-family:"font2";>Rock & Bowl</h1>
+<button type="button" onclick = "setImage('4.png')" style="border-color:black;position:absolute;left:940px;top:15px;z-index:8;background-color: #DD571C; border: 3px solid black; color: white; padding: 15px 32px; text-align: center; display: inline-block; font-size: 16px; font-family: inherit; top: 20px">About Us!</button>
+<button type="button" onclick = "setImage('3.png')" style="border-color:black;position:absolute;left:740px;top:15px;z-index:8;background-color: #DD571C; border: 3px solid black; color: white; padding: 13px 32px; text-align: center; display: inline-block; font-size: 16px; font-family: inherit; top: 20px">We're Hiring</button>
+<a id="apply" style="color:black;position:absolute;left:290px;top:400px;visibility:hidden;z-index:12;" href="https://docs.google.com/forms/d/e/1FAIpQLSeh1x8e4kJP6urVaASkP5_OTjEOz37dzBm9GWYsu9nK-kdIsw/viewform?usp=sf_link",><h2>Apply Now</h2></a>
+<button type="button" onclick = "setImage('2.png')" style="border-color:black;position:absolute;left:550px;top:15px;z-index:8;background-color: #DD571C; border: 3px solid black; color: white; padding: 15px 32px; text-align: center; display: inline-block; font-size: 16px; font-family: inherit; top: 20px">Our Food!</button>
+<button type="button" onclick = "setImage('1.png')" style="border-color:black;position:absolute;left:370px;top:15px;z-index:8;background-color: #DD571C; border: 3px solid black; color: white; padding: 15px 32px; text-align: center; display: inline-block; font-size: 16px; font-family: inherit; top: 20px">Find Us!</button>
+<img src="1.png" id="img" style="width:1440px;height:810px;z-index:-2;position: absolute;top: -105px;left:0px;">
+<img src="5.png" style="width:1440px;height:810px;z-index:-1;position: absolute;top: -105px;">
+<img src="6.png" style="width:1440px;height:810px;z-index:-2;position: absolute;top: 705px;left:0px;transform:ScaleY(-1)">
+<img src="7.png" style="width:1440px;height:810px;z-index:-1;position: absolute;top: 705px;transform:ScaleY(-1)">
+<div class="tab">
+  <button class="tablinks" onclick="openReview(event, 'Jill Pickell')">Jill Pickell</button>
+  <button class="tablinks" onclick="openReview(event, 'Anonymous')">Anonymous</button>
+  <button class="tablinks" onclick="openReview(event, 'Soro')">Soro</button>
+  <button class="tablinks" onclick="openReview(event, 'Barry')">Barry</button>
+  <button class="tablinks" onclick="openReview(event, 'Luigi')">Luigi</button>
+</div>
+
+<div id="Jill Pickell" style="display:None;" class="tabcontent">
+  <h3>Jill Pickell</h3>
+  <p>Rock & Bowl rocked my world! I, Jill Pickell, am a professional food critic and I can say without a doubt that Rock & Bowl is in the top 5 food trucks I have ever gone to! Their crispy bread perfectly complements the chicken soup. The bread doesn’t get soggy, it instead adds it’s crisp on top of the soup flavor! For a meal this good, I would easily pay over twelve dollars, but Rock & Bowl expects only three fourths of that! Not to mention they donate extra food to homeless shelters! They serve delicious food and are generous too! Even if you aren’t a fan of rock, this place still has awesome soup.</p>
+</div>
+
+<div id="Anonymous" style="display:None;" class="tabcontent">
+  <h3>Anonymous</h3>
+  <p>As a middle-aged man with 5 kids, it was nice to find an affordable and delicious chicken soup company.  The workers are nice and always dancing to the music as they serve us the quickly-made and aromatic soup. With the welcoming atmosphere provided by the music, I’m able let my 14 year old son and 4 year old quadruplets dance while I eat</p>
+</div>
+
+<div id="Soro" style="display:None;" class="tabcontent">
+  <h3>Soro</h3>
+  <p> I expected a simple snack when I was running late to work, and got so much more at Rock & Bowl! My meal was a crispy and hearty bread bowl filled with a hot, homestyle, chicken soup. Best of all I could hold the bowl in my hand easily while I was on the run. It was like a transportable, yet delectable hand warmer. The food truck was radiant, and the chef’s and employees smiles, even more! The rock music was a blast to the past for me and my favorite artist was rockin’ on an electric guitar. In New York Review, it's hard to find a restaurant that welcomes me with open arms, but the camaraderie here was tangible. They even had a cute guitar mascot! I could tell the food was freshly made and had premium quality. Tasted exactly like my Grandma’s. The service was so quick, that I was early to my office. The mouthwatering smell of that chicken soup trailed me all day, I definitely recommend!</p>
+</div>
+
+<div id="Barry" style="display:None;" class="tabcontent">
+  <h3>Barry</h3>
+  <p>My name is Barry, and I love Rock & Bowl! Their top-notch service and delicious food always brighten my day, and make for a nice quick meal after work! Not to mention their amazing live performances of new and underappreciated artists helps. All of this makes a memorable and unique food truck experience like no other in New York! Every other food truck feels the same, but Rock & Bowl is unique.</p>
+</div>
+
+<div id="Luigi" style="display:None;" class="tabcontent">
+  <h3>Luigi</h3>
+  <p>I, Luigi Mario from the Mushroom Kingdom seldom come out of my haunted mansion, but when I do, I always get Rock and Bowl. Their reasonably priced and high quality food always fills me up. On top of that, their live performances from upcoming rock artists have doubled the length of my go-to playlist. Their crunchy and filling bread bowls containing homemade soup always satisfy me. Their affable customer service always makes me enjoy my visit. Their satisfying food and engaging rock atmosphere always makes a memorable visit. One time, I dropped my bowl and the employees offered to make me another one! Not to mention their quick service never keeps me waiting.
+</p>
+</div>
+</div>
+</div>
+</body>
+</html>
